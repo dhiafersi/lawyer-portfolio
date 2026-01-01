@@ -120,10 +120,11 @@
             <div class="section-header">
                 <h2 class="section-title">الخدمات القانونية</h2>
                 <div class="section-divider"></div>
-                <p class="section-description">تمثيل قانوني شامل في مختلف المجالات القانونية</p>
+                <p class="section-description">تمثيل قانوني شامل في مختلف المجالات القانونية. اضغط على الخدمة للتفاصيل.
+                </p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" data-service="personal">
                     <div class="service-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <path
@@ -132,11 +133,11 @@
                         </svg>
                     </div>
                     <h3 class="service-title">الأحوال الشخصية</h3>
-                    <p class="service-description">تمثيل قانوني في قضايا الطلاق، النفقة، الحضانة، والميراث بخبرة
-                        واحترافية عالية.</p>
+                    <p class="service-description">تمثيل قانوني في قضايا الطلاق، النفقة، الحضانة، والميراث.</p>
+                    <span class="service-link">اقرأ المزيد &larr;</span>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-service="property">
                     <div class="service-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <path d="M10 30V12L20 8L30 12V30H25V20H15V30H10ZM17 26H23V28H17V26ZM17 22H23V24H17V22Z"
@@ -144,11 +145,11 @@
                         </svg>
                     </div>
                     <h3 class="service-title">القضايا العقارية</h3>
-                    <p class="service-description">استشارات ومرافعة في النزاعات العقارية، البيع والشراء، والملكية
-                        العقارية.</p>
+                    <p class="service-description">استشارات ومرافعة في النزاعات العقارية والملكية.</p>
+                    <span class="service-link">اقرأ المزيد &larr;</span>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-service="criminal">
                     <div class="service-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <path
@@ -156,12 +157,12 @@
                                 fill="currentColor" />
                         </svg>
                     </div>
-                    <h3 class="service-title">القضايا الجنائية والجناحية</h3>
-                    <p class="service-description">دفاع قوي وفعّال في القضايا الجنائية والجناحية مع حماية كاملة لحقوقك.
-                    </p>
+                    <h3 class="service-title">القضايا الجزائية</h3>
+                    <p class="service-description">دفاع قوي وفعّال في القضايا الجنائية والجناحية.</p>
+                    <span class="service-link">اقرأ المزيد &larr;</span>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-service="tax">
                     <div class="service-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <path
@@ -170,10 +171,11 @@
                         </svg>
                     </div>
                     <h3 class="service-title">القضايا الجبائية</h3>
-                    <p class="service-description">مرافقة قانونية متخصصة في النزاعات الضريبية والجبائية.</p>
+                    <p class="service-description">مرافقة قانونية متخصصة في النزاعات الضريبية.</p>
+                    <span class="service-link">اقرأ المزيد &larr;</span>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-service="contracts">
                     <div class="service-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <path
@@ -182,10 +184,11 @@
                         </svg>
                     </div>
                     <h3 class="service-title">قضايا العقود</h3>
-                    <p class="service-description">صياغة ومراجعة العقود والتمثيل في النزاعات التعاقدية.</p>
+                    <p class="service-description">صياغة ومراجعة العقود والتمثيل في النزاعات.</p>
+                    <span class="service-link">اقرأ المزيد &larr;</span>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-service="civil">
                     <div class="service-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <path
@@ -194,11 +197,27 @@
                         </svg>
                     </div>
                     <h3 class="service-title">القضايا المدنية</h3>
-                    <p class="service-description">تمثيل شامل في مختلف القضايا المدنية والنزاعات القانونية.</p>
+                    <p class="service-description">تمثيل شامل في مختلف القضايا المدنية.</p>
+                    <span class="service-link">اقرأ المزيد &larr;</span>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal Container -->
+    <div class="modal-overlay" id="serviceModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-icon" id="modalIcon"></div>
+                <h3 class="modal-title" id="modalTitle"></h3>
+                <div class="modal-text" id="modalDescription"></div>
+                <h4 class="modal-subtitle">تشمل خدماتنا:</h4>
+                <ul class="modal-list" id="modalList"></ul>
+                <a href="#contact" class="btn btn-primary modal-cta" id="modalCta">طلب استشارة</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Experience Section -->
     <section class="experience" id="experience">

@@ -428,3 +428,4 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('%cالأستاذة هدى الطريفي', 'font-size: 24px; font-weight: bold; color: #d4af37;');
     console.log('%cمحامية لدى محاكم التعقيب', 'font-size: 14px; color: #1a2b4a;');
     console.log('%cWebsite developed with ❤️', 'font-size: 12px; color: #64748b;');
+});
